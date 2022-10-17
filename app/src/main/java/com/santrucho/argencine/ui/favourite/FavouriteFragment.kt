@@ -1,4 +1,4 @@
-package com.santrucho.argencine.ui
+package com.santrucho.argencine.ui.favourite
 
 import android.os.Bundle
 import android.view.LayoutInflater
