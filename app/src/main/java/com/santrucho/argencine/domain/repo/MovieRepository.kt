@@ -6,4 +6,6 @@ import com.santrucho.argencine.data.model.Movie
 
 interface MovieRepository {
     suspend fun getPopularMovies() : Resource<List<Movie>>
+
+    suspend fun getMovieDetails(movieId:Long) : Resource<Movie>
 }

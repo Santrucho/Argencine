@@ -10,4 +10,8 @@ class MovieRepositoryImpl(private val dataSource : DataSource) : MovieRepository
     override suspend fun getPopularMovies(): Resource<List<Movie>> {
         return dataSource.getPopularMovies()
     }
+
+    override suspend fun getMovieDetails(movieId:Long): Resource<Movie> {
+        return dataSource.getMovieDetails(movieId)
+    }
 }
