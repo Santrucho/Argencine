@@ -1,21 +1,17 @@
 package com.santrucho.argencine.data.model
 
-import android.os.Parcelable
-import android.widget.ImageView
 import com.google.gson.annotations.SerializedName
-import kotlinx.parcelize.Parcelize
 
-@Parcelize
-data class Movie(
+data class Serie(
     @SerializedName("id")
     val id : Int = 0,
     @SerializedName("overview")
     val description : String = "",
-    @SerializedName("title")
+    @SerializedName("name")
     val title: String = "",
     @SerializedName("poster_path")
     val poster : String = "",
-    @SerializedName("release_date")
+    @SerializedName("first_air_date")
     val release_date : String = "",
     @SerializedName("original_language")
     val original_language : String = "",
@@ -23,4 +19,9 @@ data class Movie(
     val popularity : Number,
     @SerializedName("genres")
     val genres : List<Genre> = emptyList(),
-) : Parcelable
+    @SerializedName("number_of_seasons")
+    val seasons_number : Int = 0,
+    @SerializedName("number_of_episodes")
+    val episodes_number : Int = 0
+
+)

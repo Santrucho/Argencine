@@ -11,10 +11,30 @@
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
+            app:destination="@id/detailFragment">
+        </action>
+        <action
+            android:id="@+id/action_homeFragment_to_detailSerieFragment"
+            app:destination="@id/detailSerieFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.santrucho.argencine.ui.detail.DetailFragment"
-        android:label="DetailFragment" />
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="movieId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailSerieFragment"
+        android:name="com.santrucho.argencine.ui.detail.DetailSerieFragment"
+        android:label="DetailSerieFragment"
+        tools:layout="@layout/fragment_serie_detail">
+        <argument
+            android:name="serieId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
 </navigation>
